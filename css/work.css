@@ -127,6 +127,8 @@
   justify-content: flex-start;
   align-items: flex-start;
 
+  border: #000000 0.1rem solid;
+
 }
 
 .news_container{
@@ -174,23 +176,27 @@
 
 .concept_container {
   position: absolute;
+  width: 70rem;
   top: 10rem;
   right: 10rem;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 10rem;
+
+  border: #000000 0.1rem solid;
 }
 
 /* --- 2. 画像エリア --- */
 .concept_image_wrap {
+  flex: 1;
   position: relative; 
   width: 50rem;       
 }
 
 .concept_image {
-  width: 100%;
-  height: auto;
+  width: 63.9rem;
+  height: 42.6rem;
 }
 
 /* --- 3. 黄色い箱（絶対配置ではみ出し） --- */
@@ -198,7 +204,7 @@
   position: absolute;
   bottom: -5rem;   
   left: -5rem;     /* 黄色のカンプに合わせて左側へ */
-  background-color: #EEE369; 
+  background-color: #F9E90699; 
   padding: 4rem 2rem;
   width: 30rem;
 }
@@ -212,7 +218,9 @@
 /* --- 4. 縦書きタイトルエリア --- */
 .concept_title_wrap {
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
 }
 
 .concept_main_title {
@@ -230,10 +238,87 @@
 }
 
 
+/* ┌─────────────────────────────────────────┐
+    科学と技術の調和
+   └─────────────────────────────────────────┘ */
+
+.science_section {
+  padding: 10rem 0;
+  background-color: #E6E2D7;
+}
+
+.science_container_relative {
+  position: relative;
+  width: 100%;
+  height: 60rem; 
+  margin: 0 auto;
+}
+
+.science_container {
+  position: absolute;
+  top: 10rem;
+  left: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10rem;
+}
+
+/* --- 2. 画像エリア --- */
+.science_image_wrap {
+  position: relative; 
+  width: 50rem;       
+}
+
+.science_image {
+  width: 100%;
+  height: auto;
+}
+
+/* --- 3. 黄色い箱（絶対配置ではみ出し） --- */
+.science_label {
+  position: absolute;
+  bottom: -5rem;   
+  right: -5rem;     /* 黄色のカンプに合わせて左側へ */
+  background-color: #952A2699; 
+  padding: 4rem 2rem;
+  width: 30rem;
+}
+
+/* 既にある */
+/* .label_text {
+  font-size: 1.4rem;
+  line-height: 2;
+  font-weight: bold;
+} */
 
 
-/* --- レイアウト確認用（完成したら消す） --- */
-/* div, section, article, header, footer, nav, main {
+/* --- 4. 縦書きタイトルエリア --- */
+.science_title_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.science_main_title {
+  writing-mode: vertical-rl;
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 0.5em;
+}
+
+.science_sub_title {
+  writing-mode: vertical-rl;
+  font-size: 1.6rem;
+  color: #666;
+  text-transform: uppercase;
+}
+
+
+/* --- レイアウト確認用（完成したら消す） --- */ 
+/* 
+div, section, article, header, footer, nav, main {
   outline: 1px solid red !important;
 }
 img, svg {
