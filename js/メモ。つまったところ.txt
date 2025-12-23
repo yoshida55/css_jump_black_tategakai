@@ -1,0 +1,61 @@
+▢　background-image: url("../img/mainvisual-pc.jpg");をするときは
+普段とちがってima srcと時と違い　../一度上のフォルダに移動する必要がある
+
+▢　ＰＣとスマホで画像を変える場合は、HTMLでＳＲＣを指定せず
+スマホ版で
+以下のように設定する
+
+<header class="header_area">
+
+.header_area {
+  background-image: url("../img/mainvisual-pc.jpg");
+  background-size: cover; /* 要素いっぱいに広げる */
+  background-position: center; /* 中央基準で表示 */
+
+
+
+▢ポジションアブソリュートの使い方
+
+親に relative、子に absolute を設定します。
+親（position: relative）
+ └ 子（position: absolute）← 親を基準に配置される
+
+
+ HTML構造-------------------------------------------------
+html<header class="header_area">  <!-- 親 -->
+  <nav>
+    <!-- ナビゲーション -->
+  </nav>
+  
+  ★親のメインヘッダに対して、子階層にセットする
+  <div class="header_online">  <!-- 子：これを左下に配置したい -->
+    <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+      オンラインストアを見る
+    </a>
+  </div>
+</header>
+
+---------------------------------------------------------
+ポジションリラティブは子要素に書く必要ある。
+
+
+.header_area {
+  position: relative;  /* ← これがないとabsoluteが効かない */
+}
+
+
+/* 子：左下に配置 */
+.header_online {
+  position: absolute;  /* 親を基準に配置 */
+  left: 20px;         /* 左から20px */
+  bottom: 20px;       /* 下から20px */
+}
+
+
+HTML構造-------------------------------------------------
+
+▢　たてがきは
+  writing-mode: vertical-rl;
+
+  これは親要素ではなく aタグにかく。
+  

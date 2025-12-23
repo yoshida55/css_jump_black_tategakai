@@ -1,0 +1,188 @@
+/* ┌─────────────────────────────────────────┐
+   │ ｈｅａｄｅｒ　　　　　                    │
+   └─────────────────────────────────────────┘ */
+.wrapper {
+  width: 100%;
+  margin: 140rem;
+  margin: 0 auto;
+}
+
+.header_area {
+  position: relative;
+  background-image: url("../img/mainvisual-pc.jpg");
+  background-size: cover; /* 要素いっぱいに広げる */
+  background-position: center; /* 中央基準で表示 */
+
+  height: 60rem; /* 例：画面いっぱい */
+  width: 100%;
+}
+
+.header_nav_area {
+  position: absolute;
+  right: 5rem; /* 右から40px */
+  top: 5rem; /* 上から40px */
+
+  display: flex;
+  gap: 3rem; /* リスト間の余白 */
+  justify-content: center;
+  align-items: center;
+}
+
+.header_nav {
+  display: flex;
+  gap: 3rem;
+  /* ┌─────────────────────────────────────────┐
+   │ ｈｅａｄｅｒ　　　　　                    │
+   └─────────────────────────────────────────┘ */
+  .wrapper {
+    width: 100%;
+    margin: 140rem;
+    margin: 0 auto;
+  }
+
+  .header_area {
+    position: relative;
+    background-image: url("../img/mainvisual-pc.jpg");
+    background-size: cover; /* 要素いっぱいに広げる */
+    background-position: center; /* 中央基準で表示 */
+
+    height: 70rem; /* 例：画面いっぱい */
+    width: 100%;
+  }
+
+  .header_nav_area {
+    position: absolute;
+    right: 5rem; /* 右から40px */
+    top: 5rem; /* 上から40px */
+
+    display: flex;
+    gap: 3rem; /* リスト間の余白 */
+    justify-content: center;
+    align-items: center;
+  }
+  /* 親フレックス */
+  .header_nav {
+    display: flex;
+    gap: 3rem;
+    writing-mode: horizontal-tb; /* ← 親は横書き（横並び） */
+  }
+
+  .header_nav li {
+    writing-mode: vertical-rl; /* ← 子だけ縦書き */
+    list-style: none;
+  }
+
+  .header_online {
+    position: absolute;
+    left: 5rem; /* 左から40px */
+    bottom: 5rem; /* 下から40px */
+    writing-mode: vertical-rl;
+
+    padding: 1rem 1rem; /* 内側の余白 */
+
+    display: flex;
+    justify-content: right;
+    background: rgba(180, 162, 162, 0.3); /* 半透明の黒背景 */
+  }
+
+  .online_inner {
+    flex: 1;
+  }
+
+  .header_online a {
+    color: rgba(198, 180, 180, 0.9); /* 半透明の白文字 */
+    text-decoration: none;
+  }
+
+  .online_inner {
+    border: 0.01rem solid rgba(198, 180, 180, 0.9); /* 半透明の白文字 */
+    padding: 2rem 1rem; /* ← これを追加！ */
+  }
+
+  /* --- レイアウト確認用（完成したら消す） --- */
+  div,
+  section,
+  article,
+  header,
+  footer,
+  nav,
+  main {
+    outline: 1px solid red !important;
+  }
+
+  img,
+  svg {
+    outline: 1px solid blue !important;
+    background-color: rgba(0, 0, 255, 0.1);
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span,
+  a,
+  li {
+    outline: 1px solid limegreen !important;
+  }
+}
+
+.header_online {
+  position: absolute;
+  left: 5rem; /* 左から40px */
+  bottom: 5rem; /* 下から40px */
+  writing-mode: vertical-rl;
+
+  padding: 1rem 1rem; /* 内側の余白 */
+
+  display: flex;
+  justify-content: right;
+  background: rgba(180, 162, 162, 0.3); /* 半透明の黒背景 */
+}
+
+.online_inner {
+  flex: 1;
+}
+
+.header_online a {
+  color: rgba(198, 180, 180, 0.9); /* 半透明の白文字 */
+  text-decoration: none;
+}
+
+.online_inner {
+  border: 0.01rem solid rgba(198, 180, 180, 0.9); /* 半透明の白文字 */
+  padding: 2rem 1rem; /* ← これを追加！ */
+}
+
+/* --- レイアウト確認用（完成したら消す） --- */
+div,
+section,
+article,
+header,
+footer,
+nav,
+main {
+  outline: 1px solid red !important;
+}
+
+img,
+svg {
+  outline: 1px solid blue !important;
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+li {
+  outline: 1px solid limegreen !important;
+}
