@@ -1,6 +1,4 @@
-/* ┌─────────────────────────────────────────┐
-   │ ｈｅａｄｅｒ　　　　　                    │
-   └─────────────────────────────────────────┘ */
+
 .wrapper {
   width: 100%;
   margin: 140rem;
@@ -10,8 +8,8 @@
 .header_area {
   position: relative;
   background-image: url("../img/mainvisual-pc.jpg");
-  background-size: cover; /* 要素いっぱいに広げる */
-  background-position: center; /* 中央基準で表示 */
+  background-size: cover; 
+  background-position: center; 
 
   height: 60rem; /* 例：画面いっぱい */
   width: 100%;
@@ -24,111 +22,22 @@
 
   display: flex;
   gap: 3rem; /* リスト間の余白 */
+  /* justify-content: center; */
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .header_nav {
   display: flex;
   gap: 3rem;
-  /* ┌─────────────────────────────────────────┐
-   │ ｈｅａｄｅｒ　　　　　                    │
-   └─────────────────────────────────────────┘ */
-  .wrapper {
-    width: 100%;
-    margin: 140rem;
-    margin: 0 auto;
-  }
-
-  .header_area {
-    position: relative;
-    background-image: url("../img/mainvisual-pc.jpg");
-    background-size: cover; /* 要素いっぱいに広げる */
-    background-position: center; /* 中央基準で表示 */
-
-    height: 70rem; /* 例：画面いっぱい */
-    width: 100%;
-  }
-
-  .header_nav_area {
-    position: absolute;
-    right: 5rem; /* 右から40px */
-    top: 5rem; /* 上から40px */
-
-    display: flex;
-    gap: 3rem; /* リスト間の余白 */
-    justify-content: center;
-    align-items: center;
-  }
-  /* 親フレックス */
-  .header_nav {
-    display: flex;
-    gap: 3rem;
-    writing-mode: horizontal-tb; /* ← 親は横書き（横並び） */
-  }
-
-  .header_nav li {
-    writing-mode: vertical-rl; /* ← 子だけ縦書き */
-    list-style: none;
-  }
-
-  .header_online {
-    position: absolute;
-    left: 5rem; /* 左から40px */
-    bottom: 5rem; /* 下から40px */
-    writing-mode: vertical-rl;
-
-    padding: 1rem 1rem; /* 内側の余白 */
-
-    display: flex;
-    justify-content: right;
-    background: rgba(180, 162, 162, 0.3); /* 半透明の黒背景 */
-  }
-
-  .online_inner {
-    flex: 1;
-  }
-
-  .header_online a {
-    color: rgba(198, 180, 180, 0.9); /* 半透明の白文字 */
-    text-decoration: none;
-  }
-
-  .online_inner {
-    border: 0.01rem solid rgba(198, 180, 180, 0.9); /* 半透明の白文字 */
-    padding: 2rem 1rem; /* ← これを追加！ */
-  }
-
-  /* --- レイアウト確認用（完成したら消す） --- */
-  div,
-  section,
-  article,
-  header,
-  footer,
-  nav,
-  main {
-    outline: 1px solid red !important;
-  }
-
-  img,
-  svg {
-    outline: 1px solid blue !important;
-    background-color: rgba(0, 0, 255, 0.1);
-  }
-
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  span,
-  a,
-  li {
-    outline: 1px solid limegreen !important;
-  }
+  writing-mode: horizontal-tb;
 }
+
+.header_nav li {
+  writing-mode: vertical-rl; /* ← 子だけ縦書き */
+  list-style: none;
+}
+
 
 .header_online {
   position: absolute;
@@ -143,13 +52,16 @@
   background: rgba(180, 162, 162, 0.3); /* 半透明の黒背景 */
 }
 
-.online_inner {
-  flex: 1;
+.header_online a {
+  color: rgba(198, 180, 180, 0.9); /* 半透明の白文字 */
+  text-decoration: none;
 }
+
 
 .header_online a {
   color: rgba(198, 180, 180, 0.9); /* 半透明の白文字 */
   text-decoration: none;
+  writing-mode: vertical-rl;
 }
 
 .online_inner {
@@ -157,32 +69,177 @@
   padding: 2rem 1rem; /* ← これを追加！ */
 }
 
-/* --- レイアウト確認用（完成したら消す） --- */
-div,
-section,
-article,
-header,
-footer,
-nav,
-main {
-  outline: 1px solid red !important;
+/* ┌─────────────────────────────────────────┐
+   │ ニュース                        │
+   └─────────────────────────────────────────┘ */
+
+.news_container_relative {
+  position: relative;
+  width: 100%;
+  height: 60rem; /* 例：暫定 */
+  margin: 0 auto;
+  background-color: #E6E2D7;
 }
 
-img,
-svg {
+.news_container_absolute{
+  position: absolute;
+  top: 10rem;
+  right: 10rem;
+
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  gap: 10rem;
+
+}
+
+.news_title_item {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.news_main_title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+    writing-mode: vertical-rl;
+  
+}
+.news_sub_title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+    writing-mode: vertical-rl;
+}
+
+
+.news_list {
+  display: flex;
+  gap:6rem;
+
+  padding-top: 6rem;
+  
+  justify-content: flex-start;
+  align-items: flex-start;
+
+}
+
+.news_container{
+  display: flex;
+    justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.news_link {
+  display: flex;
+  gap:0.5rem;  
+  flex-direction: column;
+  list-style: none;
+  writing-mode: vertical-rl;
+}
+.news_date {
+  border-right: 0.2rem solid black;
+  padding-right: 2rem;
+  font-size: 1.4rem;
+  color: #666666;
+  margin-bottom: 0.5rem;
+}
+
+.news_text{
+  font-size: 1.6rem;
+  color: #000000;
+}
+
+/* ┌─────────────────────────────────────────┐
+    新しい価値の創造（専用スタイル）
+   └─────────────────────────────────────────┘ */
+
+.concept_section {
+  padding: 10rem 0;
+  background-color: #E6E2D7;
+}
+
+.concept_container_relative {
+  position: relative;
+  width: 100%;
+  height: 60rem; 
+  margin: 0 auto;
+}
+
+.concept_container {
+  position: absolute;
+  top: 10rem;
+  right: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10rem;
+}
+
+/* --- 2. 画像エリア --- */
+.concept_image_wrap {
+  position: relative; 
+  width: 50rem;       
+}
+
+.concept_image {
+  width: 100%;
+  height: auto;
+}
+
+/* --- 3. 黄色い箱（絶対配置ではみ出し） --- */
+.concept_label {
+  position: absolute;
+  bottom: -5rem;   
+  left: -5rem;     /* 黄色のカンプに合わせて左側へ */
+  background-color: #EEE369; 
+  padding: 4rem 2rem;
+  width: 30rem;
+}
+
+.label_text {
+  font-size: 1.4rem;
+  line-height: 2;
+  font-weight: bold;
+}
+
+/* --- 4. 縦書きタイトルエリア --- */
+.concept_title_wrap {
+  display: flex;
+  gap: 2rem;
+}
+
+.concept_main_title {
+  writing-mode: vertical-rl;
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 0.5em;
+}
+
+.concept_sub_title {
+  writing-mode: vertical-rl;
+  font-size: 1.6rem;
+  color: #666;
+  text-transform: uppercase;
+}
+
+
+
+
+/* --- レイアウト確認用（完成したら消す） --- */
+/* div, section, article, header, footer, nav, main {
+  outline: 1px solid red !important;
+}
+img, svg {
   outline: 1px solid blue !important;
   background-color: rgba(0, 0, 255, 0.1);
 }
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-span,
-a,
-li {
+p, h1, h2, h3, h4, h5, h6, span, a, li {
   outline: 1px solid limegreen !important;
-}
+} */

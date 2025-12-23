@@ -14,18 +14,17 @@
       <header class="header_area">
         <!-- └ absoluteで右上　flexをheader_image、header_imageとheader_navに指定 -->
         <nav class="header_nav_area">
-          <!-- └ 子フレックス -->
-          <div class="header_image">
-            <img src="img/logo.svg" class="header_logo" alt="創作という文字"></div>
-          </div>
-          <ul class="header_nav"> 
+          <ul class="header_nav">
             <!-- └ 子フレックス -->
             <li class="nav-item"><a href="#">お知らせ</a></li>
             <li class="nav-item"><a href="#">商 品 の ご 紹 介</a></li>
             <li class="nav-item"><a href="#">店 舗 の ご 案 内</a></li>
           </ul>
+          <!-- └ 子フレックス -->
+          <div class="header_image">
+            <img src="img/logo.svg" class="header_logo" alt="創作という文字" />
+          </div>
         </nav>
-
 
         <!-- └ absoluteで左下 -->
         <div class="header_online">
@@ -37,7 +36,120 @@
 
       <!-- メイン -->
       <main class="main">
-        <section></section>
+        <!-- ===============================================
+         お知らせ
+         =============================================== -->
+        <section>
+          <div class="news_area">
+            <div class="news_container_relative">
+              <div class="news_container_absolute">
+                <ul class="news_list">
+                  <li class="news_item">
+                    <a href="#" class="news_link">
+                      <span class="news_date">2021.01.01</span>
+                      <span class="news_text"
+                        >タ イ ト ル タ イ ト ル タ イ ト ル タ イ ト ル</span
+                      >
+                    </a>
+                  </li>
+
+                  <li class="news_item">
+                    <a href="#" class="news_link">
+                      <span class="news_date">2021.01.01</span>
+                      <span class="news_text"
+                        >タ イ ト ル タ イ ト ル タ イ ト ル タ イ ト ル</span
+                      >
+                    </a>
+                  </li>
+
+                  <li class="news_item">
+                    <a href="#" class="news_link">
+                      <span class="news_date">2021.01.01</span>
+                      <span class="news_text"
+                        >タ イ ト ル タ イ ト ル タ イ ト ル タ イ ト ル</span
+                      >
+                    </a>
+                  </li>
+
+                  <li class="news_item">
+                    <a href="#" class="news_link">
+                      <span class="news_date">2021.01.01</span>
+                      <span class="news_text"
+                        >タ イ ト ル タ イ ト ル タ イ ト ル タ イ ト ル</span
+                      >
+                    </a>
+                  </li>
+
+                  <li class="news_item">
+                    <a href="#" class="news_link">
+                      <span class="news_date">2021.01.01</span>
+                      <span class="news_text"
+                        >タ イ ト ル タ イ ト ル タ イ ト ル タ イ ト ル</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+                <div class="news_title_item">
+                  <h2 class="news_sub_title">お知らせ</h2>
+                  <div class="news_main_title">News</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===============================================
+         新 し い 価 値 の 創 造
+         =============================================== -->
+        <section class="concept_section">
+          <div class="concept_container_relative">
+            <div class="concept_container">
+              <div class="concept_image_wrap">
+                <img
+                  src="img/products1.jpg"
+                  alt="新しい価値の創造"
+                  class="concept_image"
+                />
+
+                <div class="concept_label yellow_label">
+                  <p class="label_text">
+                    テキストテキストテキスト<br />テキストテキスト
+                  </p>
+                </div>
+              </div>
+
+              <div class="concept_title_wrap">
+                <h2 class="concept_main_title">新しい価値の創造</h2>
+                <span class="concept_sub_title">Create New Values</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="concept_section science_bg">
+          <div class="concept_container_relative">
+            <div class="concept_container">
+              <div class="concept_title_wrap">
+                <h2 class="concept_main_title">科学と技術の調和</h2>
+                <span class="concept_sub_title">Science & Technology</span>
+              </div>
+
+              <div class="concept_image_wrap">
+                <img
+                  src="img/products2.jpg"
+                  alt="科学と技術の調和"
+                  class="concept_image"
+                />
+
+                <div class="concept_label brown_label">
+                  <p class="label_text">
+                    テキストテキストテキスト<br />テキストテキスト
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <!-- フッター -->
