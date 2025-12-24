@@ -1,4 +1,8 @@
-▢　background-image: url("../img/mainvisual-pc.jpg");をするときは
+▢　背景画像はPCとSPで切り替え（`<picture>`タグ or メディア
+切り替えたい場合は以下のように指定する。
+
+
+background-image: url("../img/mainvisual-pc.jpg");をするときは
 普段とちがってima srcと時と違い　../一度上のフォルダに移動する必要がある
 
 ▢　ＰＣとスマホで画像を変える場合は、HTMLでＳＲＣを指定せず
@@ -65,3 +69,37 @@ HTML構造-------------------------------------------------
 ▢　フレックスは、上にかかれたものから左から
 順番に記載されることをわすれない。
 
+
+▢　　
+            <ul class="footer_location">
+              <!-- └ 子フレックス -->
+              <li class="nav-item">
+                <a href="#">０ ３ | Ｘ Ｘ Ｘ Ｘ | Ｘ Ｘ Ｘ Ｘ</a>
+              </li>
+              <li class="nav-item">
+                <a href="#"
+                  >〒 １ ０ ６ | ０ ０ ３ ２ 　 東 京 都 港 区 六 本 木 ５ 丁 目
+                  × × × × ×</a
+                >
+              </li>
+            </ul>
+
+            nav-itemが縦書きにならない
+
+
+.footer_location {
+  display: flex;
+  gap: 3rem;
+  writing-mode: horizontal-tb;
+}
+
+縦書きで「横並び」にしたい時の呪文
+CSS
+
+
+答え
+.target {
+  display: flex;
+  writing-mode: vertical-rl; /* 縦書きにする */
+  flex-direction: column;    /* 横に並べるための必須スイッチ */
+}

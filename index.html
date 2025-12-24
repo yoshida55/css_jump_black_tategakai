@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/work.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>タイトル</title>
   </head>
   <body>
@@ -16,14 +22,14 @@
         <nav class="header_nav_area">
           <ul class="header_nav">
             <!-- └ 子フレックス -->
-            <li class="nav-item"><a href="#">お知らせ</a></li>
             <li class="nav-item"><a href="#">商 品 の ご 紹 介</a></li>
             <li class="nav-item"><a href="#">店 舗 の ご 案 内</a></li>
+            <li class="nav-item"><a href="#">お知らせ</a></li>
           </ul>
           <!-- └ 子フレックス -->
-          <div class="header_image">
+          <h1 class="header_image">
             <img src="img/logo.svg" class="header_logo" alt="創作という文字" />
-          </div>
+          </h1>
         </nav>
 
         <!-- └ absoluteで左下 -->
@@ -158,11 +164,57 @@
         <!-- ===============================================
          Google マップ
          ============================================== -->
-        <section></section>
-      </main>
+        <section>
+          <div class="map_area">
+            <iframe
+              class="map_frame"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6267.266688993859!2d140.89300699999998!3d38.241614649999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8a27e74711b57f%3A0xe66fbf8b0c0625bd!2z44CSOTg0LTA4Mjcg5a6u5Z-O55yM5LuZ5Y-w5biC6Iul5p6X5Yy65Y2X5bCP5rOJ5YWr6LuS5bCP6Lev!5e0!3m2!1sja!2sjp!4v1766544240851!5m2!1sja!2sjp"
+              ...
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </section>
 
-      <!-- フッター -->
-      <footer class="footer"></footer>
+        <footer class="footer_area">
+          <!-- └ absoluteで右上　flexをfooter_image、footer_imageとfooter_navに指定 -->
+          <nav class="footer_nav_area">
+            <ul class="footer_nav">
+              <!-- └ 子フレックス -->
+              <li class="nav-item"><a href="#">商 品 の ご 紹 介</a></li>
+              <li class="nav-item"><a href="#">店 舗 の ご 案 内</a></li>
+              <li class="nav-item"><a href="#">お知らせ</a></li>
+            </ul>
+
+            <ul class="footer_location">
+              <!-- └ 子フレックス -->
+              <li class="nav-item">
+                <a href="#">０ ３ | Ｘ Ｘ Ｘ Ｘ | Ｘ Ｘ Ｘ Ｘ</a>
+              </li>
+              <li class="nav-item">
+                <a href="#"
+                  >〒 １ ０ ６ | ０ ０ ３ ２ 　 東 京 都 港 区 六 本 木 ５ 丁 目
+                  × × × × ×</a
+                >
+              </li>
+            </ul>
+            <!-- └ 子フレックス -->
+            <div class="footer_image">
+              <img
+                src="img/logo.svg"
+                class="footer_logo"
+                alt="創作という文字"
+              />
+            </div>
+          </nav>
+
+          <!-- └ absoluteで左下 -->
+          <div class="footer_online">
+            <a href="#">オ ン ラ イ ン ス ト ア を 見 る ― お 問 い 合 わ せ</a>
+          </div>
+        </footer>
+      </main>
     </div>
 
     <script src="js/work.js"></script>
