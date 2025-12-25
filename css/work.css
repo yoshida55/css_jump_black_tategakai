@@ -6,7 +6,7 @@
 }
 
 /* ┌─────────────────────────────────────────┐
-   │ ヘッダーエリア   googleマップ                       │
+   │ ヘッダーエリア                          │
    └─────────────────────────────────────────┘ */
 .header_area {
   position: relative;
@@ -14,7 +14,7 @@
   background-size: cover;
   background-position: center;
 
-  height: 60rem; /* 例：画面いっぱい */
+  height: 60rem;
   width: 100%;
 }
 
@@ -412,4 +412,61 @@
 .online_inner {
   border: 0.01rem solid rgba(198, 180, 180, 0.9); /* 半透明の白文字 */
   padding: 2rem 1rem; /* ← これを追加！ */
+}
+
+@media screen and (max-width: 768px) {
+  .header_area {
+    position: relative;
+    background-image: url("../img/mainvisual-sp.jpg");
+    background-size: cover;
+    background-position: center;
+
+    height: 60rem;
+    width: 100%;
+  }
+  .header_nav a {
+    color: rgba(255, 255, 255, 0.9); /* 半透明の白文字 */
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-family: Yu Mincho;
+  }
+  .news_container_absolute {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    gap: 1rem;
+  }
+
+  .news_list {
+    display: flex;
+    gap: 1.5rem;
+
+    padding-top: 6rem;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .concept_container {
+    position: absolute;
+    width: 70rem;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  /* .concept_image {
+    width: 30.1rem;
+    height: 19.4rem;
+  } */
 }
