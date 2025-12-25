@@ -190,19 +190,18 @@
 .concept_image_wrap {
   padding-top: 10rem;
   flex: 1;
-  position: relative;
-  width: 50rem;
 }
 
 .concept_image {
   width: 63.9rem;
   height: 42.6rem;
+  position: relative;
 }
 
 /* --- 3. 黄色い箱（絶対配置ではみ出し） --- */
 .concept_label {
   position: absolute;
-  bottom: -5rem;
+  bottom: 5rem;
   left: -5rem; /* 黄色のカンプに合わせて左側へ */
   background-color: #f9e90699;
   padding: 4rem 2rem;
@@ -294,12 +293,13 @@
 /* --- 2. 画像エリア --- */
 .science_image_wrap {
   padding-top: 5rem;
-  position: relative;
+
   width: 63.9rem;
 }
 
 /* └ 画像エリア  */
 .science_image {
+  position: relative;
   width: 100%;
   height: 42.6rem;
 }
@@ -307,7 +307,7 @@
 /* --- 3. 黄色い箱（絶対配置ではみ出し） --- */
 .science_label {
   position: absolute;
-  bottom: -5rem;
+  bottom: 10rem;
   right: -5rem; /* 黄色のカンプに合わせて左側へ */
   background-color: #952a2699;
   padding: 4rem 2rem;
@@ -399,8 +399,9 @@
 .footer_online {
   position: absolute;
   left: 5rem; /* 左から40px */
-  bottom: 5rem; /* 下から40px */
+  top: 5.5rem; /* 下から40px */
   writing-mode: vertical-rl;
+  font-size: 1.4rem;
 }
 
 .footer_online a {
@@ -415,6 +416,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  /* ┌─────────────────────────────────────────┐
+     │ header　　　★レスポンシブ               │
+     └─────────────────────────────────────────┘ */
+
   .header_area {
     position: relative;
     background-image: url("../img/mainvisual-sp.jpg");
@@ -430,6 +435,29 @@
     font-size: 1.6rem;
     font-family: Yu Mincho;
   }
+
+  .header_online {
+    position: absolute;
+    left: 3rem; /* 左から40px */
+    bottom: 2rem; /* 下から40px */
+    writing-mode: vertical-rl;
+
+    padding: 1rem 1rem; /* 内側の余白 */
+
+    display: flex;
+    justify-content: right;
+    background: rgba(180, 162, 162, 0.3); /* 半透明の黒背景 */
+  }
+
+  .online_inner {
+    border: 0.01rem solid rgba(198, 180, 180, 0.9); /* 半透明の白文字 */
+    padding: 2.5rem 1.5rem; /* ← これを追加！ */
+    font-size: 2rem;
+  }
+  /* ┌─────────────────────────────────────────┐
+     │ ニュースエリア　　  ★レスポンシブ           │
+     └─────────────────────────────────────────┘ */
+
   .news_container_absolute {
     position: absolute;
     top: 2rem;
@@ -446,7 +474,7 @@
 
   .news_list {
     display: flex;
-    gap: 1.5rem;
+    gap: 0rem;
 
     padding-top: 6rem;
 
@@ -454,19 +482,189 @@
     align-items: flex-start;
   }
 
+  .news_date {
+    border-right: 0.2rem solid black;
+    /* padding-right: 2rem; */
+    font-size: 1.4rem;
+    color: #666666;
+    margin-bottom: 0.5rem;
+  }
+
+  .news_item:nth-child(4),
+  .news_item:nth-child(5) {
+    display: none;
+  }
+
+  /* ┌─────────────────────────────────────────┐
+     │ 新しい価値　conceptエリア　　 ★レスポンシブ                   │
+     └─────────────────────────────────────────┘ */
+
   .concept_container {
-    position: absolute;
-    width: 70rem;
+    width: 90%;
+    height: 30rem;
     top: 2rem;
     right: 2rem;
     display: flex;
+    padding-left: 2rem;
     justify-content: center;
     align-items: flex-start;
     gap: 1rem;
   }
 
-  /* .concept_image {
+  /* --- 2. 画像エリア --- */
+  .concept_image_wrap {
+    padding-top: 10rem;
+    flex: 1;
+  }
+
+  .concept_image {
+    position: relative;
     width: 30.1rem;
     height: 19.4rem;
-  } */
+  }
+
+  /* --- 3. 黄色い箱（絶対配置ではみ出し） --- */
+  .concept_label {
+    position: absolute;
+    bottom: -5rem;
+    left: 0rem; /* 黄色のカンプに合わせて左側へ */
+    background-color: #f9e90699;
+    padding: 1.5rem 2rem;
+    height: 10rem;
+    width: 19rem;
+  }
+
+  .label_text {
+    width: 80%;
+    font-size: 1.4rem;
+    line-height: 2;
+    color: white;
+  }
+
+  /* 新しい価値の創造 */
+  .concept_main_title {
+    writing-mode: vertical-rl;
+    font-size: 2.4rem;
+    letter-spacing: 0.5em;
+    font-family: Yu Mincho, serif;
+  }
+
+  /* Create New Values */
+  .concept_sub_title {
+    display: none;
+  }
+
+  .news_container_relative {
+    position: relative;
+    width: 100%;
+    height: 40rem; /* 例：暫定 */
+    margin: 0 auto;
+    background-color: #e6e2d7;
+  }
+
+  .concept_container_relative {
+    position: relative;
+    width: 100%;
+    height: 30rem;
+    margin: 0 auto;
+  }
+
+  .science_section {
+    padding: 10rem 0 10rem;
+    background-color: #e6e2d7;
+  }
+
+  .science_container_relative {
+    position: relative;
+    width: 100%;
+    height: 30rem;
+    margin: 0 auto;
+  }
+
+  .science_container {
+    position: absolute;
+
+    width: 90%;
+    top: 2rem;
+
+    left: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 0rem;
+  }
+
+  /* --- 2. 画像エリア --- */
+  .science_image_wrap {
+    width: 100%; /* Wrapと同じ30remになります */
+    position: relative; /* ← 基準点にする */
+    padding-top: 5rem;
+  }
+
+  /* └ 画像エリア  */
+  .science_image {
+    width: 30rem; /* Wrapと同じ30remになります */
+    height: 19.4rem;
+  }
+
+  .science_label {
+    position: absolute;
+
+    bottom: -3rem;
+    right: -2rem;
+
+    right: 0rem; /* 黄色のカンプに合わせて左側へ */
+    background-color: #952a2699;
+    padding: 1.5rem 2rem;
+
+    height: 10rem;
+    width: 19rem;
+  }
+
+  /* └ 　科学と技術の調和 */
+  .science_main_title {
+    writing-mode: vertical-rl;
+    font-size: 2.4rem;
+    letter-spacing: 0.5em;
+    font-family: Yu Mincho, serif;
+  }
+
+  /* Science & Technology */
+  .science_sub_title {
+    display: none;
+  }
+
+  .footer_nav_area {
+    position: absolute;
+    right: 2rem; /* 右から40px */
+    top: 5rem; /* 上から40px */
+
+    display: flex;
+    gap: 1rem; /* リスト間の余白 */
+    /* justify-content: center; */
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .footer_location {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.4rem;
+    /* ↓ ここを縦書きに変更 */
+    writing-mode: vertical-rl;
+
+    /* ↓ 重要！縦書きモードでの「横並び」は column になります */
+    flex-direction: column;
+
+    /* ↓ 数字（03や〒）を寝かせずに立たせる設定 */
+    text-orientation: upright;
+  }
+
+  .footer_nav {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.4rem;
+    writing-mode: horizontal-tb;
+  }
 }

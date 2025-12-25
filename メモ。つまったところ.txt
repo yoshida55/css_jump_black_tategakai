@@ -25,6 +25,11 @@ background-image: url("../img/mainvisual-pc.jpg");をするときは
  └ 子（position: absolute）← 親を基準に配置される
 
 
+ ★同じ階層でもできる上は間違い
+ →かならず重ねたい要素をリラティブにする。
+
+
+
  HTML構造-------------------------------------------------
 html<header class="header_area">  <!-- 親 -->
   <nav>
@@ -103,3 +108,8 @@ CSS
   writing-mode: vertical-rl; /* 縦書きにする */
   flex-direction: column;    /* 横に並べるための必須スイッチ */
 }
+
+▢　flex
+子フレックスで、widthを指定すると、flex1としているより
+優先されるため、基本、サイズを指定する必要がない場合は
+flex1にきめておくと楽。
